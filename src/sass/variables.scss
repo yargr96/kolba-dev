@@ -1,8 +1,16 @@
 // Цвета
-$bg-main: #F1F1F1;
+$main-text-color: #0d0d0d;
+$important-text-color: #5f22b2;
+$important-light-color: #5f22b2;
 
 // Размеры
 $mobile-widths-only: "max-width: 767px";
 $tablet-widths: "min-width: 768px";
 $tablet-widths-only: "max-width: 1199px";
 $desktop-widths: "min-width: 1200px";
+
+// Шрифты
+$font-regular: 'Gilroy-Regular', sans-serif;
+$font-bold: 'Gilroy-Bold', sans-serif;
+$font-extrabold: 'Gilroy-ExtraBold', sans-serif;
+$font-medium: 'Gilroy-Medium', sans-serif;

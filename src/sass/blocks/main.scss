@@ -1,0 +1,12 @@
+.main {
+    &__header {
+        width: 650px;
+        font-size: 55px;
+        line-height: 70px;
+    }
+
+    &__important-text {
+        font-family: $font-extrabold;
+        color: $important-text-color;
+    }
+}

@@ -1,0 +1,13 @@
+.logo {
+    padding-left: 80px;
+    padding-bottom: 10px;
+    height: 100px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+
+    &__span {
+        font-family: $font-bold;
+    }
+}

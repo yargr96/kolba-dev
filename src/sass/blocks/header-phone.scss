@@ -1,0 +1,29 @@
+.header-phone {
+    &__phone {
+        font-family: $font-medium;
+        font-size: 22px;
+        color: $main-text-color;
+        display: block;
+        padding-left: 24px;
+        background-image: url(../../img/phone.png);
+        background-repeat: no-repeat;
+        background-position: 0 center;
+    }
+
+    &__callback {
+        color: $important-light-color;
+        font-size: 16px;
+        position: relative;
+        padding-bottom: 2px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            background-image: url(../../img/phone-dot.png);
+        }
+    }
+}
