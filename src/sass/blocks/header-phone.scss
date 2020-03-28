@@ -1,7 +1,12 @@
 .header-phone {
+    width: 203px;
+    margin-top: -7px;
+
     &__phone {
         font-size: 22px;
         color: $main-text-color;
+        letter-spacing: -0.2px;
+        margin-bottom: 7px;
     }
 
     &__callback {

@@ -2,4 +2,22 @@
     font-size: 50px;
     line-height: normal;
     font-weight: normal;
+    position: relative;
+    z-index: 1;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -20px;
+        margin: auto;
+        transform: rotate(-10deg);
+        font-size: 80px;
+        color: #fdebfc;
+        font-family: $font-flower-city;
+        text-align: center;
+        width: 10px;
+        white-space: nowrap;
+        z-index: -1;
+    }
 }

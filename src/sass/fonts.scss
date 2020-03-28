@@ -6,6 +6,13 @@
 }
 
 @font-face {
+	font-family: "Gilroy-SemiBold";
+	src: 	url("../fonts/Gilroy-SemiBold/Gilroy-SemiBold.woff") format("woff");
+	font-weight: normal;	
+	font-style: normal;
+}
+
+@font-face {
 	font-family: "Gilroy-Bold";
 	src: 	url("../fonts/Gilroy-Bold/Gilroy-Bold.woff") format("woff");
 	font-weight: normal;	
@@ -32,3 +39,12 @@
 	font-weight: normal;	
 	font-style: normal;
 }
+
+@font-face {
+    font-family: 'TheFlowerCity';
+    src: url('../fonts/TheFlowerCity/TheFlowerCity.woff2') format('woff2'),
+        url('../fonts/TheFlowerCity/TheFlowerCity.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
