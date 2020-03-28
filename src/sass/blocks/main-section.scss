@@ -1,4 +1,10 @@
 .main-section {
+    padding-bottom: 320px;
+    @include section-background('../../img/main-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
     &__header {
         margin-bottom: 215px;
     }

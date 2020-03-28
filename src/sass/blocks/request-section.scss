@@ -1,0 +1,22 @@
+.request-section {
+    @include section-background('../../img/request-bg.jpg');
+    padding-top: 115px;
+    padding-bottom: 140px;
+
+    &__content {
+        width: 50%;
+        margin-left: auto;
+        padding-left: 35px;
+    }
+
+    &__header {
+        margin-bottom: 23px;
+    }
+
+    &__text {
+        margin-bottom: 35px;
+        color: $text-light-color;
+        font-size: 18px;
+        padding-right: 50px;
+    }
+}

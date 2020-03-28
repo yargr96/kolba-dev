@@ -10,6 +10,7 @@ html {
 	font-family: $font-regular;
 	color: $main-text-color;
 	font-style: normal;
+	background-color: $background-color;
 }
 
 h1, h2, h3, p {
@@ -26,6 +27,11 @@ a:hover,
 a:visited,
 a:active {
 	text-decoration: none;
+	color: inherit;
+}
+
+strong {
+	font-family: $font-bold;
 }
 
 // Допускает только вертикальное изменение текстового поля
