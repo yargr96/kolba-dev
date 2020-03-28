@@ -5,4 +5,70 @@
     max-width: 451px;
     height: 11px;
     border-radius: 50px;
+    position: relative;
+
+    &__filled {
+        width: 33%;
+        background-image: linear-gradient( 90deg, rgb(121,48,171) 0%, rgb(185,102,209) 100%);
+        opacity: 0.839;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 50px;
+    }
+
+    &__thumb {
+        width: 34px;
+        height: 34px;
+        transform: translateX(-50%);
+        box-shadow: 0px 3px 7px 0px rgba(163, 87, 201, 0.26);
+        background-image: linear-gradient( 90deg, rgb(121,48,171) 0%, rgb(185,102,209) 100%);
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 33%;
+        border-radius: 50px;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            width: 14px;
+            height: 14px;
+            border-radius: 50px;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+    }
+
+    &__count {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        color: #853ab2;
+        font-size: 22px;
+        font-family: $font-bold;
+        cursor: initial;
+    }
+
+    &__text {
+        position: absolute;
+        bottom: -30px;
+        left: -60px;
+        right: -60px;
+        text-align: center;
+        white-space: nowrap;
+        font-size: 18px;
+        opacity: 0.6;
+        cursor: initial;
+    }
 }

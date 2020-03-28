@@ -25,15 +25,24 @@
         text-align: center;
     }
 
+    &__calculator {
+        padding-top: 21px;
+        padding-left: 37px;
+    }
+
     &__header {
-        margin-bottom: 50px;
+        margin-bottom: 66px;
     }
 
     &__checkboxes {
-        margin-bottom: 70px;
+        margin-bottom: 63px;
     }
 
     &__range {
-        margin-bottom: 70px;
+        margin-bottom: 59px;
+    }
+
+    &__checkbox-label {
+        margin-bottom: 50px;
     }
 }
