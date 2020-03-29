@@ -1,6 +1,6 @@
 .main-section {
     padding-bottom: 356px;
-    @include section-background('../../img/main-bg.jpg');
+    @include section-background('../img/main-bg.jpg');
 
     &__header {
         margin-bottom: 209px;

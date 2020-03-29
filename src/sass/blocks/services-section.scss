@@ -3,11 +3,24 @@
 
     &__header {
         margin-bottom: 114px;
+
+        @media ($mobile-width) {
+            margin-bottom: 70px;
+        }
     }
 
     &__services {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 15px;
+
+        @media ($mobile-width) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1ft);
+            grid-gap: 100px;
+        }
+    }
+
+    &__item {
+        margin: auto;
     }
 }

@@ -5,6 +5,11 @@
     position: relative;
     z-index: 1;
 
+    @media ($mobile-width) {
+        font-size: 24px;
+        text-align: center;
+    }
+
     &__background {
         position: absolute;
         top: 0;
@@ -19,5 +24,12 @@
         width: 10px;
         white-space: nowrap;
         z-index: -1;
+
+        @media ($mobile-width) {
+            font-size: 27px;
+            text-align: center;
+            transform: matrix( 1.56752130548609,-0.23113535644148,0.23113535644148,1.5675213054861,0,0);
+            left: 30px;
+        }    
     }
 }
