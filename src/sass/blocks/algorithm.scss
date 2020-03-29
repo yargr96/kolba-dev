@@ -1,0 +1,66 @@
+.algorithm {
+    display: flex;
+    justify-content: space-between;
+    padding: 183px 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        height: 4px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-image: url(../../img/algorithm/dot.png);
+    }
+
+    &__entity {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 4px;
+            position: absolute;
+            margin: auto;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 145px;
+            background-image: url(../../img/algorithm/dot.png);
+        }
+
+        &:nth-child(2n) {
+            &::before {
+                top: auto;
+                bottom: 50%;
+            }
+
+            .algorithm__description-node {
+                top: auto;
+                bottom: 169px;
+            }
+
+            .algorithm-node__text {
+                top: auto;
+                bottom: 36px;
+            }
+
+            .algorithm-node__number {
+                left: auto;
+                bottom: auto;
+                top: 52%;
+                right: 16px;
+            }
+        }
+    }
+
+    &__description-node {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 169px;
+    }
+}
