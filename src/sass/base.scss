@@ -11,6 +11,11 @@ html {
 	color: $main-text-color;
 	font-style: normal;
 	background-color: $background-color;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
 }
 
 h1, h2, h3, p {
