@@ -2,7 +2,16 @@
     padding-bottom: 356px;
     @include section-background('../img/main-bg.jpg');
 
+    @media ($mobile-width) {
+        background-image: url(../img/main-bg_mobile.jpg);
+        padding-bottom: 50px;
+    }
+
     &__header {
         margin-bottom: 209px;
+
+        @media ($tablet-width) {
+            margin-bottom: 50px;
+        }
     }
 }

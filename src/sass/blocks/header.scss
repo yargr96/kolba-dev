@@ -3,4 +3,8 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 64px;
+
+    @media ($tablet-width) {
+        padding-top: 25px;
+    }
 }

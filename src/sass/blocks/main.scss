@@ -4,6 +4,17 @@
         font-size: 55px;
         line-height: 70px;
         margin-bottom: 36px;
+
+        
+        @media ($tablet-width) {
+            font-size: 24px;
+            text-align: center;
+            line-height: 35px;
+            width: auto;
+            font-family: $font-regular;
+            margin-bottom: 310px;
+            font-weight: normal;
+        }
     }
 
     &__important-text {

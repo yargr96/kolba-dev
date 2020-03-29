@@ -5,13 +5,14 @@
         margin-bottom: 114px;
 
         @media ($mobile-width) {
-            margin-bottom: 70px;
+            margin-bottom: 71px;
         }
     }
 
     &__services {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 282px);
+        grid-gap: 14px;
 
         @media ($mobile-width) {
             grid-template-columns: 1fr;

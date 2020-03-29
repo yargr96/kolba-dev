@@ -42,6 +42,10 @@
         left: -15px;
         bottom: 91%;
         line-height: normal;
+
+        @media ($tablet-width) {
+            display: none;
+        }
     }
 
     &_description {
@@ -57,5 +61,16 @@
         left: -60px;
         right: -60px;
         font-family: $font-medium;
+
+        @media ($tablet-width) {
+            font-size: 16px;
+        }
+
+        &_mobile-fix {
+            @media ($tablet-width) {
+                text-align: left;
+                transform: translate(23px);
+            }
+        }
     }
 }

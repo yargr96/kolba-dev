@@ -1,8 +1,14 @@
 .algorithm {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 183px 0;
     position: relative;
+
+    @media ($tablet-width) {
+        flex-direction: column;
+        padding: 0;
+    }
 
     &::before {
         content: '';
@@ -14,10 +20,17 @@
         right: 0;
         margin: auto;
         background-image: url(../img/algorithm/dot.png);
+
+        @media ($tablet-width) {
+            height: auto;
+            width: 4px;
+        }
     }
 
     &__entity {
         position: relative;
+        width: 72px;
+        height: 72px;
 
         &::before {
             content: '';
@@ -29,17 +42,40 @@
             right: 0;
             height: 145px;
             background-image: url(../img/algorithm/dot.png);
+
+            @media ($tablet-width) {
+                top: 0;
+                left: 50%;
+                bottom: 0;
+                right: auto;
+                width: 108px;
+                height: 4px;
+            }
         }
 
         &:nth-child(2n) {
             &::before {
                 top: auto;
                 bottom: 50%;
+
+                @media ($tablet-width) {
+                    top: 0;
+                    bottom: 0;
+                    right: 50%;
+                    left: auto;
+                }
             }
 
             .algorithm__description-node {
                 top: auto;
                 bottom: 169px;
+
+                @media ($tablet-width) {
+                    bottom: 0;
+                    top: 0;
+                    left: auto;
+                    right: 130px;
+                }
             }
 
             .algorithm-node__text {
@@ -54,6 +90,12 @@
                 right: 16px;
             }
         }
+
+        @media ($tablet-width) {
+            &:not(:last-child) {
+                margin-bottom: 75px;
+            }
+        }
     }
 
     &__description-node {
@@ -62,5 +104,11 @@
         left: 0;
         right: 0;
         top: 169px;
+
+        @media ($tablet-width) {
+            top: 0;
+            bottom: 0;
+            left: 130px;
+        }
     }
 }

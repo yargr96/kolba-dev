@@ -3,6 +3,11 @@
     position: relative;
     font-size: 20px;
 
+    @media ($tablet-width) {
+        font-size: 18px;
+        padding-left: 50px;
+    }
+
     &::before {
         content: '';
         width: 62px;
@@ -12,6 +17,12 @@
         bottom: -10px;
         background-image: url(../img/logo.png);
         background-repeat: no-repeat;
+
+        @media ($tablet-width) {
+            width: 40px;
+            height: 70px;
+            background-size: contain;
+        }
     }
 
     &_footer::before {

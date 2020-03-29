@@ -2,6 +2,10 @@
     @include section-background("../img/algorithm-bg.jpg");
     padding-top: 198px;
     padding-bottom: 220px;
+    
+    @media ($tablet-width) {
+        background-size: auto 100%;
+    }
 
     &__header {
         margin-bottom: 35px;
