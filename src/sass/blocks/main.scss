@@ -12,7 +12,7 @@
             line-height: 35px;
             width: auto;
             font-family: $font-regular;
-            margin-bottom: 310px;
+            margin-bottom: 280px;
             font-weight: normal;
         }
     }
@@ -20,5 +20,11 @@
     &__important-text {
         font-family: $font-extrabold;
         color: $important-text-color;
+    }
+
+    &__button {
+        @media ($mobile-width) {
+            margin: auto;
+        }
     }
 }

@@ -3,10 +3,22 @@
     padding-top: 115px;
     padding-bottom: 140px;
 
+    @media ($tablet-width) {
+        padding-bottom: 390px;
+        background-position: 29% bottom;
+        background-size: 1090px;
+    }
+
     &__content {
         width: 50%;
         margin-left: auto;
         padding-left: 35px;
+
+        @media ($tablet-width) {
+            width: auto;
+            margin: 0;
+            padding-left: 0;
+        }
     }
 
     &__header {
@@ -18,5 +30,16 @@
         color: $text-light-color;
         font-size: 18px;
         padding-right: 50px;
+
+        @media ($tablet-width) {
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+    &__button {
+        @media ($tablet-width) {
+            margin: auto;
+        }
     }
 }

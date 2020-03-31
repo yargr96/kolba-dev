@@ -6,13 +6,27 @@
     &__content {
         width: 50%;
         padding-right: 20px;
+
+        @media ($tablet-width) {
+            width: auto;
+            padding: 0;
+        }
     }
 
     &__header {
         margin-bottom: 47px;
+
+        @media ($tablet-width) {
+            margin-bottom: 25px;
+        }
     }
 
     &__text {
         font-size: 18px;
+
+        @media ($tablet-width) {
+            font-size: 16px;
+            text-align: center;
+        }
     }
 }
