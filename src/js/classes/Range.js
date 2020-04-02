@@ -46,6 +46,8 @@ class Range {
         
         window.addEventListener('mousemove', this._onMouseMove);
         window.addEventListener('touchmove', this._onMouseMove);
+
+        document.body.classList.add('not-selectable');
     }
 
     _onMouseMove(e) {
@@ -62,6 +64,7 @@ class Range {
 
     _onMouseUp() {
         window.removeEventListener('mousemove', this._onMouseMove);
+        document.body.classList.remove('not-selectable');
     }
 
     _setThumbPosition() {

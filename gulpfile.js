@@ -126,16 +126,16 @@ gulp.task('js-libs', function () {
 
 gulp.task('img', function () {
 	return gulp.src('src/img/**/*')
-		.pipe(cache(imagemin([ // сжимаем их с наилучшими настройками с учетом кеширования
-			imagemin.gifsicle({ interlaced: true }),
-			imagemin.jpegtran({ progressive: true }),
-			imagemin.svgo(),
-			imagemin.optipng({ optimizationLevel: 3 }),
-			pngquant({ quality: '65-70', speed: 5 })
-		], {
-			verbose: true // показывает в командной строке, какая картинка на сколько оптимизирована
-		})))
-		.pipe(tinypng()) // tinypng
+		// .pipe(cache(imagemin([ // сжимаем их с наилучшими настройками с учетом кеширования
+		// 	imagemin.gifsicle({ interlaced: true }),
+		// 	imagemin.jpegtran({ progressive: true }),
+		// 	imagemin.svgo(),
+		// 	imagemin.optipng({ optimizationLevel: 3 }),
+		// 	pngquant({ quality: '65-70', speed: 5 })
+		// ], {
+		// 	verbose: true // показывает в командной строке, какая картинка на сколько оптимизирована
+		// })))
+		// .pipe(tinypng()) // tinypng
 		.pipe(gulp.dest('build/img'));
 });
 
