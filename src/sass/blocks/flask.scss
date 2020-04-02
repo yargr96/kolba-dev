@@ -13,10 +13,11 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 50%;
+        height: 0;
         background-image: url(../img/flask_full.png);
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center bottom;
+        transition: height .2s;
     }
 }

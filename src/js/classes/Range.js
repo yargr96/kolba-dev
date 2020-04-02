@@ -1,8 +1,8 @@
 class Range {
     constructor({rangeNode, min, max, step, value, onChange}) {
         this._rangeNode = rangeNode;
-        this._min = min;
-        this._max = max;
+        this.min = min;
+        this.max = max;
         this._step = step;
 
         if (onChange) this.onChange = onChange;
@@ -21,9 +21,9 @@ class Range {
         window.addEventListener('mouseup', this._onMouseUp);
         window.addEventListener('touchend', this._onMouseUp);
 
-        this._stepsCount = (this._max - this._min) / this._step;
+        this._stepsCount = (this.max - this.min) / this._step;
 
-        this.value = value === undefined ? this._min : value;
+        this.value = value === undefined ? this.min : value;
 
         this._setRangeCoordinates = this._setRangeCoordinates.bind(this);
         this._setRangeCoordinates();
@@ -52,10 +52,10 @@ class Range {
         const mouseX = e.pageX || e.changedTouches[0].pageX;        
         const mouseOffset = mouseX - this._leftRangeCoordinate;
 
-        let value = Math.round(mouseOffset / this._stepLength) * this._step + this._min;
+        let value = Math.round(mouseOffset / this._stepLength) * this._step + this.min;
 
-        if (value < this._min) value = this._min;
-        if (value > this._max) value = this._max;
+        if (value < this.min) value = this.min;
+        if (value > this.max) value = this.max;
         
         this.value = value;
     }
@@ -65,7 +65,7 @@ class Range {
     }
 
     _setThumbPosition() {
-        const offset = (this._value - this._min) * this._stepLength / this._step;
+        const offset = (this._value - this.min) * this._stepLength / this._step;
 
         this._filled.style.width = offset + 'px';
         this._thumb.style.left = offset + 'px';
