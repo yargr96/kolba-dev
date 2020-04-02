@@ -96,9 +96,13 @@ gulp.task('css-libs', function () {
 });
 
 gulp.task('js', function () {
-	var commonMinJs = gulp.src('src/js/common.js')
-		.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
+	var commonMinJs = gulp.src([
+		'src/js/classes/*.js',
+		'src/js/main.js'
+	])
+		.pipe(concat('main.min.js'))
+		// .pipe(uglify())
+		// .pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('src/js'));
 	// .pipe(browsersync.reload({ stream: true }))
 

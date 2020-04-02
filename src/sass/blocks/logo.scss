@@ -25,7 +25,20 @@
         }
     }
 
-    &_footer::before {
-        background-image: url(../img/logo_footer.png);
+    &_footer {
+        @media ($tablet-width) {
+            font-size: 20px;
+            padding-left: 82px;
+            margin-bottom: 15px;
+
+            &::before {
+                width: 62px;
+                height: 95px;
+            }
+        }
+
+        &::before {
+            background-image: url(../img/logo_footer.png);
+        }
     }
 }

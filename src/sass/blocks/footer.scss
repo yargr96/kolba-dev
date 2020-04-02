@@ -40,6 +40,10 @@
     &__copyright {
         text-align: center;
         padding-top: 5px;
+
+        @media ($tablet-width) {
+            color: #645f6f;
+        }
     }
 
     &__contacts {
