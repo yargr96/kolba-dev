@@ -3,6 +3,13 @@
     padding-top: 176px;
     padding-bottom: 160px;
 
+    @media ($tablet-width) {
+        padding-bottom: 240px;
+        padding-top: 130px;
+        background-position: left top;
+        background-size: auto 100%;
+    }
+
     &__content {
         width: 50%;
         padding-right: 20px;
@@ -17,7 +24,7 @@
         margin-bottom: 47px;
 
         @media ($tablet-width) {
-            margin-bottom: 25px;
+            margin-bottom: 29px;
         }
     }
 

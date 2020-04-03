@@ -30,6 +30,8 @@ class Range {
         window.addEventListener('resize', this._setRangeCoordinates);
 
         this._setThumbPosition();
+
+        this._mousePressed = false;
     }
 
     _setRangeCoordinates() {
@@ -43,14 +45,18 @@ class Range {
 
     _onMouseDown(e) {
         if (!e.target.classList.contains('range__thumb')) return;
+        if (this._mousePressed) return;
         
         window.addEventListener('mousemove', this._onMouseMove);
         window.addEventListener('touchmove', this._onMouseMove);
 
         document.body.classList.add('not-selectable');
+        this._mousePressed = true;
     }
 
     _onMouseMove(e) {
+        if (!this._mousePressed) return;
+
         const mouseX = e.pageX || e.changedTouches[0].pageX;        
         const mouseOffset = mouseX - this._leftRangeCoordinate;
 
@@ -65,6 +71,8 @@ class Range {
     _onMouseUp() {
         window.removeEventListener('mousemove', this._onMouseMove);
         document.body.classList.remove('not-selectable');
+        
+        this._mousePressed = false;
     }
 
     _setThumbPosition() {

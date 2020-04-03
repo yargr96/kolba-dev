@@ -7,12 +7,13 @@
     }
 
     &__flask-section {
-        width: 50%;
+        width: 100%;
+        max-width: 505px;
         @include section-background('../img/calculator-bg.jpg');
         background-position: 0 0;
-        min-height: 550px;
+        background-size: contain;
+        height: 550px;
         padding-top: 120px;
-        padding-right: 35px;
     }
 
     &__flask {
@@ -28,6 +29,8 @@
     &__calculator {
         padding-top: 21px;
         padding-left: 37px;
+        width: 50%;
+        margin-left: auto;
     }
 
     &__header {

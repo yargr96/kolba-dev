@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         min: 13,
         max: 69,
         step: 4,
-        // value: 25
+        value: 21
     });
 
     const socials = new Socials({
@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const flask = new Flask({
         flask: document.querySelector('.flask')
     })
+
+    new FlaskSection(document.querySelector('.calculator-section__flask-section'));
 
     window.calculator = new Calculator({
         range,
