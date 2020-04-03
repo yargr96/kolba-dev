@@ -5,8 +5,12 @@
     position: relative;
     z-index: 1;
 
-    @media ($tablet-width) {
+    @media ($mobile-width) {
         font-size: 24px;
+    }
+
+    @media ($tablet-width) {
+        font-size: 34px;
         text-align: center;
     }
 
@@ -25,8 +29,12 @@
         white-space: nowrap;
         z-index: -1;
 
-        @media ($tablet-width) {
+        @media ($mobile-width) {
             font-size: 27px;
+        }    
+
+        @media ($tablet-width) {
+            font-size: 37px;
             text-align: center;
             transform: matrix( 1.56752130548609,-0.23113535644148,0.23113535644148,1.5675213054861,0,0);
             left: 0;

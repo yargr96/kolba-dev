@@ -2,8 +2,19 @@
     padding-top: 90px;
     padding-bottom: 50px;
 
+    @media ($tablet-width) {
+        padding-top: 0;
+        margin-top: -100px;
+    }
+
     &__container {
         display: flex;
+        position: relative;
+
+        @media ($tablet-width) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__flask-section {
@@ -14,6 +25,10 @@
         background-size: contain;
         height: 550px;
         padding-top: 120px;
+
+        @media ($mobile-width) {
+            margin-bottom: 8px;
+        }
     }
 
     &__flask {
@@ -24,17 +39,35 @@
         font-family: $font-bold;
         font-size: 25px;
         text-align: center;
+        white-space: nowrap;
+
+        @media ($mobile-width) {
+            font-family: $font-regular;
+        }
     }
 
     &__calculator {
-        padding-top: 21px;
-        padding-left: 37px;
+        padding-top: 20px;
+        padding-left: 36px;
         width: 50%;
         margin-left: auto;
+
+        @media ($tablet-width) {
+            width: auto;
+            margin: 0;
+            padding-left: 0;
+        }
     }
 
     &__header {
         margin-bottom: 66px;
+        
+        @media ($tablet-width) {
+            /**
+            * test
+            */
+            display: none;
+        }
     }
 
     &__checkboxes {
@@ -47,5 +80,11 @@
 
     &__checkbox-label {
         margin-bottom: 50px;
+    }
+
+    &__button {
+        @media ($tablet-width) {
+            margin: auto;
+        }
     }
 }
