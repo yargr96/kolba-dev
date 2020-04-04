@@ -16,10 +16,11 @@ var gulp = require('gulp'),
 
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglifyjs'), // сжатие js
+	babel = require('gulp-babel'),
 
 	imagemin = require('gulp-imagemin'), // сжатие изображений
 	tinypng = require('gulp-tinypng-nokey'), // сжатие изображений, используя API tinypng.com (без ключа) 
-	pngquant = require('imagemin-pngquant'), // сжатие png
+	// pngquant = require('imagemin-pngquant'), // сжатие png
 
 	del = require('del'), // плагин для удаления файлов и папок
 	run = require('run-sequence'), // плагин который позволяет собирать таск с вложениями последовательно 
@@ -96,15 +97,12 @@ gulp.task('css-libs', function () {
 });
 
 gulp.task('js', function () {
-	var commonMinJs = gulp.src([
+	return gulp.src([
 		'src/js/classes/*.js',
 		'src/js/main.js'
 	])
 		.pipe(concat('main.min.js'))
-		// .pipe(uglify())
-		// .pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('src/js'));
-	// .pipe(browsersync.reload({ stream: true }))
 
 	/* в качестве примера (в task-е несколько задач)
 	var fancyboxMinJs = gulp.src('src/js/fancybox.js')
@@ -112,6 +110,15 @@ gulp.task('js', function () {
 	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('src/js')); */
 });
+
+gulp.task('js:build', function() {
+	return gulp.src('src/js/main.min.js')
+		.pipe(babel({
+			presets: ['@babel/preset-env']
+		}))
+		.pipe(uglify())
+		.pipe(gulp.dest('build/js'));
+})
 
 gulp.task('js-libs', function () {
 	return gulp.src([ // берем все необходимые библиотеки
@@ -154,9 +161,6 @@ gulp.task('copy', function () {
 	var buildCss = gulp.src('src/css/*.min.css')
 		.pipe(gulp.dest('build/css'));
 
-	var buildJs = gulp.src('src/js/*.min.js')
-		.pipe(gulp.dest('build/js'));
-
 	var buildFavicon = gulp.src([
 		'src/android-icon.png',
 		'src/apple-icon.png',
@@ -179,7 +183,7 @@ gulp.task('build', function (fn) {
 		'css-libs',
 		'js-libs',
 		'style',
-		'js',
+		'js:build',
 		'img',
 		'copy',
 		fn
