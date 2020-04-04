@@ -1,6 +1,10 @@
 .services-section {
     padding-bottom: 89px;
 
+    @media ($tablet-width) {
+        padding-bottom: 0;
+    }
+
     &__header {
         margin-bottom: 114px;
 
