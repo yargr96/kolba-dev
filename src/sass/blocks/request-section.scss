@@ -6,8 +6,8 @@
     @media ($tablet-width) {
         padding-top: 0;
         padding-bottom: 390px;
-        background-position: 29% bottom;
-        background-size: 1090px;
+        background-image: url(../img/request-bg_mobile.jpg);
+        background-position: center bottom;
     }
 
     &__content {
@@ -35,6 +35,7 @@
         @media ($tablet-width) {
             text-align: center;
             padding: 0;
+            margin-bottom: 46px;
         }
     }
 

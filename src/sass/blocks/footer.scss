@@ -4,6 +4,10 @@
     padding: 58px 0 53px;
     font-size: 18px;
 
+    @media ($tablet-width) {
+        padding-top: 54px;
+        padding-bottom: 30px;
+    }
 
     &__container {
         display: grid;
@@ -23,7 +27,7 @@
         @media ($tablet-width) {
             display: flex;
             justify-content: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
 
 
             &_copyright {
@@ -33,6 +37,7 @@
 
             &_contacts {
                 order: 2;
+                margin-bottom: 27px;
             }
         }
     }

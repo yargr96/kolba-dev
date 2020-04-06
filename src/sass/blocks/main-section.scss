@@ -3,21 +3,15 @@
     @include section-background('../img/main-bg.jpg');
 
     @media ($tablet-width) {
-        background-position: right 0;
-        background-size: auto 100%;
-        padding-bottom: 0;
-        margin-bottom: 60px;
-    }
-
-    @media (max-width: 525px) {
-        background-position: 79% 0;
+        background-image: url(../img/main-bg_mobile.jpg);
+        height: 720px;
     }
 
     &__header {
         margin-bottom: 209px;
 
         @media ($tablet-width) {
-            margin-bottom: 260px;
+            margin-bottom: 30px;
         }
     }
 }

@@ -6,7 +6,8 @@
     z-index: 1;
 
     @media ($mobile-width) {
-        font-size: 24px;
+        font-size: 25px;
+        line-height: 33px;
     }
 
     @media ($tablet-width) {
