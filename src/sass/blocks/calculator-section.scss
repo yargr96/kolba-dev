@@ -1,25 +1,58 @@
 .calculator-section {
-    padding-top: 90px;
+    padding-top: 47px;
     padding-bottom: 50px;
 
     @media ($tablet-width) {
         padding-top: 0;
         padding-bottom: 0;
         margin-top: -100px;
+        @include section-background("../img/calculator-bg_mobile.jpg");
+        background-position: center 33px;
     }
 
     &__container {
-        display: flex;
-        position: relative;
+        display: grid;
+        grid-template-areas: 
+        "flask header"
+        "flask checkboxes"
+        "flask range"
+        "flask design"
+        "total button"
+        ;
+        grid-template-columns: 505px 1fr;
+        grid-template-rows: 145px 148px 70px 84px;
 
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            grid-template-areas: 
+            "flask header"
+            "flask checkboxes"
+            "flask range"
+            "total design"
+            "total button"
+            ;
+
+            grid-template-columns: 415px 1fr;
+        }
+        
         @media ($tablet-width) {
-            flex-direction: column;
-            align-items: center;
-            padding-top: 50px;
+            max-width: 320px;
+            grid-template-areas: 
+            "header header"
+            "flask checkboxes"
+            "range range"
+            "design design"
+            "total total"
+            "button button"
+            ;
+
+            grid-template-columns: 132px 1fr;
+            grid-template-rows: 101px 253px 77px 0px 159px;
         }
     }
 
     &__flask-section {
+        grid-area: flask;
         width: 100%;
         max-width: 505px;
         @include section-background('../img/calculator-bg.jpg');
@@ -28,23 +61,44 @@
         height: 550px;
         padding-top: 120px;
 
-        @media ($mobile-width) {
-            margin-bottom: 8px;
+        @media ($tablet-width) {
+            background-image: none;
+            position: relative;
         }
     }
 
     &__flask {
-        margin-bottom: 20px;
+        @media ($tablet-width) {
+            position: absolute;
+            top: -7px;
+            left: -150px;
+            width: 288px;
+        }
     }
 
     &__total {
+        grid-area: total;
         font-family: $font-bold;
         font-size: 25px;
         text-align: center;
         white-space: nowrap;
+        padding-top: 65px;
 
-        @media ($mobile-width) {
+        @media ($tablet-width) {
+            font-family: $font-bold;
+            font-size: 24px;
+            text-align: left;
+            padding-left: 48px;
+        }
+    }
+
+    &__total-text {
+        @media ($tablet-width) {
             font-family: $font-regular;
+            font-size: 18px;
+            display: block;
+            opacity: 0.61;
+            margin-bottom: 5px;
         }
     }
 
@@ -61,33 +115,65 @@
         }
     }
 
-    &__header {
-        margin-bottom: 66px;
-        
+    &__header-wrapper {
+        grid-area: header;
+        margin-left: 116px;
+        padding-top: 19px;
+
         @media ($tablet-width) {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
+            margin-left: 0;
         }
     }
 
     &__checkboxes {
-        margin-bottom: 63px;
+        @media ($tablet-width) {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 
-    &__range {
-        margin-bottom: 59px;
+    &__checkboxes-wrapper {
+        grid-area: checkboxes;
+        padding-left: 116px;
+        
+        @media ($tablet-width) {
+            padding-left: 0;
+            position: relative;
+        }
     }
 
-    &__checkbox-label {
-        margin-bottom: 50px;
+    &__range-wrapper {
+        grid-area: range;
+        padding-left: 116px;
+        
+        @media ($tablet-width) {
+            padding-left: 0;
+        }
+    }
+
+    &__design-wrapper {
+        grid-area: design;
+        padding-left: 116px;
+
+        @media ($tablet-width) {
+            padding-left: 0;
+        }
     }
 
     &__button {
+
         @media ($tablet-width) {
             margin: auto;
+        }
+    }
+
+    &__button-wrapper {
+        grid-area: button;
+        padding-left: 116px;
+
+        @media ($tablet-width) {
+            padding-left: 0;
         }
     }
 }

@@ -38,7 +38,9 @@
 				в ваших социальных сетях от 5 000 руб./ мес
 			</h1>
 
-			<a href="#" class="button main__button">Оставить заявку</a>
+			<div class="main__button-wrapper">
+				<a href="#" class="button main__button">Оставить заявку</a>
+			</div>
 		</main>
 	</section>
 
@@ -180,45 +182,49 @@
 
 	<section class="section calculator-section">
 		<div class="container calculator-section__container">
-			<div class="calculator-section__flask-section">
-				<div class="flask calculator-section__flask">
-					<div class="flask__full"></div>
-				</div>
-				<div class="calculator-section__total">
-					Итого:
-					<span class="calculator-section__total-count">0</span>
-					руб. / мес
-				</div>
-			</div>
-			<div class="calculator-section__calculator">
+			<div class="calculator-section__header-wrapper">
 				<h2 class="section-header calculator-section__header">
 					Стоимость
 					<div class="section-header__background">Cost</div>
 				</h2>
+			</div>
+			
+			<div class="calculator-section__flask-section">
+				<div class="flask calculator-section__flask">
+					<div class="flask__full"></div>
+				</div>
+			</div>
 
+			<div class="calculator-section__total">
+				<span class="calculator-section__total-text">Итого:</span>				
+				<span class="calculator-section__total-count">0</span>
+				руб. / мес
+			</div>
+
+			<div class="calculator-section__checkboxes-wrapper">
 				<div class="checkboxes calculator-section__checkboxes">
-					<label class="checkboxes__item checkbox-label">
+					<label class="checkboxes__item checkboxes__item_vk checkbox-label">
 						<label class="checkbox checkbox-label__checkbox">
 							<input class="checkbox__input checkbox__input_social" type="checkbox" name="vk">
 							<div class="checkbox__mark"></div>
 						</label>
 						VK
 					</label>
-					<label class="checkboxes__item checkbox-label">
+					<label class="checkboxes__item checkboxes__item_instagram checkbox-label">
 						<label class="checkbox checkbox-label__checkbox">
 							<input class="checkbox__input checkbox__input_social" type="checkbox" name="instagram" checked>
 							<div class="checkbox__mark"></div>
 						</label>
 						Instagram
 					</label>
-					<label class="checkboxes__item checkbox-label">
+					<label class="checkboxes__item _fb checkbox-label">
 						<label class="checkbox checkbox-label__checkbox">
 							<input class="checkbox__input checkbox__input_social" type="checkbox" name="fb">
 							<div class="checkbox__mark"></div>
 						</label>
 						FB
 					</label>
-					<label class="checkboxes__item checkbox-label">
+					<label class="checkboxes__item checkboxes__item_ok checkbox-label">
 						<label class="checkbox checkbox-label__checkbox">
 							<input class="checkbox__input checkbox__input_social" type="checkbox" name="ok">
 							<div class="checkbox__mark"></div>
@@ -226,23 +232,29 @@
 						Одноклассники
 					</label>
 				</div>
-
+			</div>
+			
+			<div class="calculator-section__range-wrapper">
 				<div class="range calculator-section__range">
 					<div class="range__filled"></div>
 					<div class="range__thumb">
 						<div class="range__count">10</div>
 						<div class="range__text">Постов в месяц</div>
 					</div>
-				</div>
-
-				<label class="checkbox-label calculator-section__checkbox-label">
+				</div>	
+			</div>
+			
+			<div class="calculator-section__design-wrapper">
+				<label class="checkbox-label calculator-section__checkbox-label_design">
 					<label class="checkbox checkbox-label__checkbox">
 						<input class="checkbox__input checkbox__input_design" type="checkbox" name="design-content">
 						<div class="checkbox__mark"></div>
 					</label>
 					Дизайнерское оформление сетки контента
 				</label>
-
+			</div>
+		
+			<div class="calculator-section__button-wrapper">
 				<a href="#" class="button calculator-section__button">Оставить заявку</a>
 			</div>
 		</div>

@@ -28,13 +28,16 @@
         color: $important-text-color;
     }
 
-    &__button {
+    &__button-wrapper {
         @media ($tablet-width) {
             margin: auto;
             position: absolute;
             left: 0;
             right: 0;
-            top: 553px;
+            top: 560px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
         }
     }
 }

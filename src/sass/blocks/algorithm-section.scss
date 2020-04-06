@@ -5,9 +5,15 @@
     
     @media ($tablet-width) {
         background-image: url(../img/algorithm-bg_mobile.jpg);
+        margin-top: -97px;
+        padding-bottom: 184px;
     }
 
     &__header {
         margin-bottom: 35px;
+
+        @media ($tablet-width) {
+            margin-bottom: 54px;
+        }
     }
 }

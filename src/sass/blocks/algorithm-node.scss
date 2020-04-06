@@ -64,6 +64,8 @@
 
         @media ($tablet-width) {
             font-size: 16px;
+            top: auto;
+            bottom: 31px;
         }
 
         &_mobile-fix {

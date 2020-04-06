@@ -7,5 +7,9 @@
     &__checkbox {
         margin-right: 15px;
         flex-shrink: 0;
+
+        @media ($tablet-width) {
+            margin-right: 10px;
+        }
     }
 }
