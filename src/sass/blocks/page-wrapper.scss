@@ -1,0 +1,8 @@
+.page-wrapper {
+    transition: filter .2s ease-in;
+    filter: blur(0);
+
+    &_blured {
+        filter: blur(7.6px);
+    }
+}

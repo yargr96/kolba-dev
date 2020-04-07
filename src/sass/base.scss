@@ -46,3 +46,11 @@ strong {
 textarea {
     resize: vertical;
 }
+
+button {
+	border: none;
+
+	&:focus {
+		outline: none;
+	}
+}

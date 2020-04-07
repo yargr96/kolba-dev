@@ -1,0 +1,62 @@
+.request-form {
+    &__header {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 33px;
+
+        @media ($tablet-width) {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        text-align: center;
+        color: #6c6c6c;
+        margin-bottom: 29px;
+
+        @media ($tablet-width) {
+            font-size: 16px;
+            margin-bottom: 11px;
+        }
+    }
+
+    &__inputs {
+        margin-bottom: 35px;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        max-width: 343px;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        border-bottom: 1px solid #d0d0d0;
+        padding: 12px 24px;
+        margin-bottom: 19px;
+        background-repeat: no-repeat;
+        background-position: 1px center;
+
+        &:focus {
+            outline: none;
+        }
+
+        &_name {
+            background-image: url(../img/user.png);
+        }
+
+        &_phone {
+            background-image: url(../img/form-phone.png);
+        }
+
+        &_email {
+            background-image: url(../img/form-envelop.png);
+        }
+    }
+
+    &__button {
+        margin: auto;
+    }
+}

@@ -18,10 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new FlaskSection(document.querySelector('.calculator-section__flask-section'));
 
-    window.calculator = new Calculator({
+    new Calculator({
         range,
         socials,
         flask,
         countContainer: document.querySelector('.calculator-section__total-count')
     });
+
+    popup({
+        linkToPopupSelector: '.popup-link',
+        closePopupSelector: '.close-popup',
+        popupSelector: '#request-popup'
+    });
+
+    document.querySelectorAll('.request-form__input_phone').forEach(el => {
+        const inputMask = new Inputmask('+7(999)999-99-99', {
+            showMaskOnHover: false
+        });
+        
+        inputMask.mask(el);
+    })
+
+    submitForm();
 })

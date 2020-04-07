@@ -99,6 +99,7 @@ gulp.task('css-libs', function () {
 gulp.task('js', function () {
 	return gulp.src([
 		'src/js/classes/*.js',
+		'src/js/functions/*.js',
 		'src/js/main.js'
 	])
 		.pipe(concat('main.min.js'))
@@ -122,9 +123,8 @@ gulp.task('js:build', function() {
 
 gulp.task('js-libs', function () {
 	return gulp.src([ // берем все необходимые библиотеки
-		// 'src/libs/jquery/dist/jquery.min.js', // к примеру ,берем jquery
-		// 'src/libs/magnific-popup//dist/jquery.magnific-popup.min.js'// берем magnific-popup
-		//'src/libs/animate/animate-css.js'
+		'src/libs/inputmask.min.js',
+		'src/libs/axios.min.js',
 	])
 		.pipe(concat('libs.min.js')) // cобираем их в кучу в новом файле libs.min.js
 		.pipe(uglify()) // cжимаем js файл
@@ -168,6 +168,11 @@ gulp.task('copy', function () {
 	])
 		.pipe(gulp.dest('build'));
 
+	var jsLibs = gulp.src('src/js/libs.min.js')
+		.pipe(gulp.dest('build/js'));
+
+	var php = gulp.src('src/*.php')
+		.pipe(gulp.dest('build'));
 });
 
 gulp.task('watch', ['browser-sync', 'style:dev', 'js', 'css-libs', 'js-libs'], function () {

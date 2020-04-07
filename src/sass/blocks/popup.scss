@@ -1,0 +1,110 @@
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0 20px;
+    opacity: 0;
+    transition: all .2s ease-in;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .32;
+        cursor: pointer;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: 0.36;
+        }
+    }
+
+    &__body {
+        position: relative;
+        width: 100%;
+        max-width: 644px;
+        height: 605px;
+        background-color: #fff;
+        border-radius: 10px;
+        z-index: 1;
+        box-shadow: 0px 1px 109px 0px rgba(0, 0, 0, 0.13);
+        
+        @media ($tablet-width) {
+            height: auto;
+        }
+    }
+
+    &__cross {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 31px;
+        right: 32px;
+        cursor: pointer;
+        opacity: .8;
+        transition: opacity .2s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            width: 42px;
+            height: 3px;
+            border-radius: 50px;
+            position: absolute;
+            top: 0;
+            right: -5px;
+            bottom: 0;
+            left: -5px;
+            margin: auto;
+            background-image: linear-gradient( 90deg, rgb(121,48,171) 0%, rgb(185,102,209) 100%);
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        @media ($tablet-width) {
+            top: 16px;
+            right: 14px;
+            width: 21px;
+            height: 21px;
+
+            &::before,
+            &::after {
+                width: 26px;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 450px;
+        margin: auto;
+        padding-top: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @media ($tablet-width) {
+            padding-top: 56px;
+            padding-bottom: 56px;
+        }
+    }
+}
