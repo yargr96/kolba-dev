@@ -3,7 +3,7 @@ class FlaskSection {
         this._section = section;
         this._DEFAUTL_WIDTH = 505;
         this._DEFAUTL_HEIGHT = 550;
-        this._DEFAUTL_PADDING_TOP = 120;
+        this._DEFAUTL_PADDING_TOP = 102;
         this._proportion = this._DEFAUTL_HEIGHT / this._DEFAUTL_WIDTH;
         this._paddingProportion = this._DEFAUTL_PADDING_TOP / this._DEFAUTL_WIDTH;
 

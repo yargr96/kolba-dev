@@ -84,6 +84,11 @@
                 top: 52%;
                 right: 16px;
             }
+
+            .algorithm-node__text {
+                top: auto;
+                bottom: 36px;
+            }
         }
 
         @media ($tablet-width) {

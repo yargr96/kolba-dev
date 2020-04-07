@@ -46,7 +46,7 @@
             "button button"
             ;
 
-            grid-template-columns: 132px 1fr;
+            grid-template-columns: 42.8% 57.2%;
             grid-template-rows: 101px 253px 77px 0px 159px;
         }
     }
@@ -70,9 +70,9 @@
     &__flask {
         @media ($tablet-width) {
             position: absolute;
-            top: -7px;
-            left: -150px;
-            width: 288px;
+            top: -8px;
+            right: 10px;
+            width: 267px;
         }
     }
 
