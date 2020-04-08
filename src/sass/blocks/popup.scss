@@ -36,7 +36,6 @@
         position: relative;
         width: 100%;
         max-width: 644px;
-        height: 605px;
         background-color: #fff;
         border-radius: 10px;
         z-index: 1;
@@ -98,9 +97,7 @@
         width: 100%;
         max-width: 450px;
         margin: auto;
-        padding-top: 100px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 100px 20px 103px;
 
         @media ($tablet-width) {
             padding-top: 56px;

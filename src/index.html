@@ -328,12 +328,28 @@
 					<div class="request-form__header">Оставьте заявку</div>
 					<div class="request-form__text">И в ближайшее время мы свяжемся с Вами</div>
 					<div class="request-form__inputs">
-						<input placeholder="Введите Ваше Имя" type="text" class="request-form__input request-form__input_name" name="name">
-						<input placeholder="Введите Телефон" type="tel" class="request-form__input request-form__input_phone" name="phone">
+						<input required placeholder="Введите Ваше Имя" type="text" class="request-form__input request-form__input_name" name="name">
+						<input required placeholder="Введите Телефон" type="tel" class="request-form__input request-form__input_phone" name="phone">
 						<input placeholder="Введите Ваш E-mail" type="email" class="request-form__input request-form__input_email" name="email">
 					</div>
 					<button class="button request-form__button">Оставить заявку</button>
 				</form>
+
+				<div style="display: none;" class="thankyou">
+					<div class="thankyou__header request-form__header">Спасибо</div>
+					<div class="thankyou__text request-form__text">
+						Ваша заявка отправлена, наш менеджер свяжется с вами в ближайшее время
+					</div>
+					<a href="#" class="button thankyou__button request-form__button close-popup">OK</a>
+				</div>
+
+				<div style="display: none;" class="error">
+					<div class="request-form__header">Ошибка</div>
+					<div class="error__text request-form__text">
+						Не получилось отправить заявку. Проверьте интернет-соединение и попробуйте перезагрузить страницу.
+					</div>
+					<a href="#" class="button error__button request-form__button close-popup">OK</a>
+				</div>
 			</div>
 		</div>
 	</div>

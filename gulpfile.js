@@ -123,6 +123,7 @@ gulp.task('js:build', function() {
 
 gulp.task('js-libs', function () {
 	return gulp.src([ // берем все необходимые библиотеки
+		'src/libs/promise-polyfill.min.js',
 		'src/libs/inputmask.min.js',
 		'src/libs/axios.min.js',
 	])
@@ -147,7 +148,7 @@ gulp.task('img', function () {
 });
 
 gulp.task('clean', function () {
-	return del.sync('build');
+	return del.sync(['./build/**', '!./build', '!./build/.git']);
 });
 
 gulp.task('copy', function () {
@@ -162,9 +163,7 @@ gulp.task('copy', function () {
 		.pipe(gulp.dest('build/css'));
 
 	var buildFavicon = gulp.src([
-		'src/android-icon.png',
-		'src/apple-icon.png',
-		'src/favicon.png'
+		'src/*.ico'
 	])
 		.pipe(gulp.dest('build'));
 
